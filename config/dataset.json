@@ -1,0 +1,7 @@
+{
+  "wordListURL": "https://raw.githubusercontent.com/nikhilcn5/crossword-data/main/wordnik/words.txt",
+  "minWordLength": 3,
+  "maxWordLength": 10,
+  "gridSizes": [5,6,7],
+  "difficultyLevels": ["easy","medium","hard"]
+}
