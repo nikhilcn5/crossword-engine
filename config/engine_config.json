@@ -1,0 +1,40 @@
+{
+  "datasets": {
+    "words": "https://raw.githubusercontent.com/nikhilcn5/crossword-data/main/wordnik/words.txt",
+    "clues": "https://raw.githubusercontent.com/nikhilcn5/crossword-data/main/clues/clues.json"
+  },
+
+  "dictionary": {
+    "minLength": 3,
+    "maxLength": 10,
+    "uppercase": true,
+    "alphabeticOnly": true
+  },
+
+  "grid": {
+    "sizes": [5,6,7],
+    "allowBlackSquares": true,
+    "symmetry": false
+  },
+
+  "rules": {
+    "noRepeatedWords": true,
+    "singleLetterCells": false,
+    "rebusAllowed": false,
+    "minWordLength": 3
+  },
+
+  "solver": {
+    "algorithm": "CSP",
+    "heuristics": [
+      "minimumRemainingValues",
+      "forwardChecking",
+      "frequencyScoring"
+    ]
+  },
+
+  "difficulty": {
+    "easyFrequencyThreshold": 5,
+    "mediumFrequencyThreshold": 3
+  }
+}
