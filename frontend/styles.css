@@ -1,0 +1,108 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f7f9ff;
+  color: #152341;
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+button, select {
+  border: 1px solid #b9c8f5;
+  border-radius: 8px;
+  background: white;
+  padding: 0.45rem 0.65rem;
+}
+
+.board-and-clues {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 1rem;
+}
+
+.grid {
+  --grid-size: 7;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  border: 2px solid #1d2d57;
+  background: #1d2d57;
+  gap: 1px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cell.black {
+  background: #1d2d57;
+  cursor: default;
+}
+
+.cell.active-word {
+  background: #dce8ff;
+}
+
+.cell.active-cell {
+  background: #9ec2ff;
+}
+
+.number {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  font-size: 0.58rem;
+}
+
+.value {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.clue-list {
+  display: grid;
+  gap: 0.35rem;
+  max-height: 230px;
+  overflow: auto;
+}
+
+.clue-item {
+  text-align: left;
+}
+
+.clue-item.selected {
+  background: #dce8ff;
+}
+
+.completion {
+  color: #0a8845;
+  min-height: 1.3rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .board-and-clues {
+    grid-template-columns: 1fr;
+  }
+}

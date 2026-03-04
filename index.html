@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crossword Engine</title>
+    <link rel="stylesheet" href="frontend/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header>
+        <h1>Crossword Generator & Solver</h1>
+        <p id="status">Booting...</p>
+      </header>
+
+      <section class="controls">
+        <label>Difficulty
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+        <label>Grid Size
+          <select id="grid-size">
+            <option value="5">5x5</option>
+            <option value="6">6x6</option>
+            <option value="7" selected>7x7</option>
+          </select>
+        </label>
+        <button id="generate-btn">Generate Puzzle</button>
+        <button id="reveal-letter-btn">Reveal Letter</button>
+        <button id="reveal-word-btn">Reveal Word</button>
+        <button id="reveal-puzzle-btn">Reveal Puzzle</button>
+        <div class="timer">⏱ <span id="timer">00:00</span></div>
+      </section>
+
+      <section class="board-and-clues">
+        <div id="grid" class="grid"></div>
+        <aside class="clues">
+          <p id="completion" class="completion"></p>
+          <div>
+            <h2>Across</h2>
+            <div id="across-clues" class="clue-list"></div>
+          </div>
+          <div>
+            <h2>Down</h2>
+            <div id="down-clues" class="clue-list"></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="frontend/app.js"></script>
+  </body>
+</html>
